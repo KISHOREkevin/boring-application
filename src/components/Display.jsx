@@ -35,12 +35,12 @@ const Display = () => {
     })
   }
   let randomBtnClick = async ()=>{
-      let response = await axios.get("https://www.boredapi.com/api/activity");
+      let response = await axios.get("https://bored.api.lewagon.com/api/activity/");
       let data = response.data;
       setApiDatum(data)
   }
   let generateBtnClick = async ()=>{
-    let response = await axios.get(`https://www.boredapi.com/api/activity?type=${userDatum.activitytype}&participants=${userDatum.participants}`);
+    let response = await axios.get(`https://bored.api.lewagon.com/api/activity/?type=${userDatum.activitytype}&participants=${userDatum.participants}`);
     let data = response.data;
     setApiDatum(data);
   }
